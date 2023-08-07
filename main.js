@@ -116,7 +116,7 @@ $('.board button').on('click', function () {
     if (horizontalWinCheck() || verticalWinCheck() || diagonalWinCheck()) {
         $('h3').fadeOut('fast');
         $('h2').fadeOut('fast');
-        $('h1').text(currentPlayer + ' you have won! Refresh your browser to play again!').css('fontSize', '50px');
+        $('h1').text(currentName + ' you have won! Refresh your browser to play again!').css('fontSize', '50px');
     }
     currentPlayer = currentPlayer * -1;
 
@@ -127,6 +127,6 @@ $('.board button').on('click', function () {
     } else {
         currentName = playerTwo;
         currentColor = playerTwoColor;
-        $('h3').text(currentPlayer + ': it is your turn, pick a column to drop your red chip.')
+        $('h3').text(currentName + ': it is your turn, pick a column to drop your red chip.')
     }
 })
